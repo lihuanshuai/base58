@@ -1,0 +1,24 @@
+# Zig编译输出目录
+zig-cache/
+.zig-cache
+zig-out/
+
+# 可执行文件
+*.exe
+*.pdb
+*.obj
+*.o
+
+# IDE和编辑器文件
+.vscode/
+.idea/
+*.swp
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 依赖管理
+.gyro/
+deps.zig
