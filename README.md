@@ -18,6 +18,22 @@
 
 [Zig](https://ziglang.org/) implementation of base58 encoding
 
+## Usage
+
+```zig
+const std = @import("std");
+const base58 = @import("base58");
+
+pub fn main() !void {
+    const allocator = std.heap.page_allocator;
+    const input = "Hello World!";
+    const encoded = try base58.encode(allocator, input);
+    defer allocator.free(encoded);
+
+    std.debug.print("{s}\n", .{encoded});  // Output: 2NEpo7TZRRrLZSi2U
+}
+```
+
 ## Build
 
 ```bash
